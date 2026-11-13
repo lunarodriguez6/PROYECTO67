@@ -1,0 +1,680 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"29 main.c
+[c E1380 0 1 2 .. ]
+[n E1380 . IZQUIERDA DERECHA REPOSO  ]
+"31
+[c E1385 0 1 2 .. ]
+[n E1385 . INACTIVO ACTIVO COLDOWN  ]
+[p mainexit ]
+"87 user.h
+[v _appInit `(v ~T0 @X0 0 ef ]
+"40 main.c
+[v _InicializarMEF_J1 `(v ~T0 @X0 0 ef ]
+"41
+[v _InicializarMEF_J2 `(v ~T0 @X0 0 ef ]
+"44
+[v _InicializarMEF_P1 `(v ~T0 @X0 0 ef ]
+"45
+[v _InicializarMEF_P2 `(v ~T0 @X0 0 ef ]
+"42
+[v _ActualizarMEF_J1 `(v ~T0 @X0 0 ef ]
+"43
+[v _ActualizarMEF_J2 `(v ~T0 @X0 0 ef ]
+"46
+[v _ActualizarMEF_P1 `(v ~T0 @X0 0 ef ]
+"47
+[v _ActualizarMEF_P2 `(v ~T0 @X0 0 ef ]
+"359 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f887.h
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"358
+[u S11 `S12 1 ]
+[n S11 . . ]
+"370
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+"173
+[s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"172
+[u S5 `S6 1 ]
+[n S5 . . ]
+"184
+[v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
+"297
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"296
+[u S9 `S10 1 ]
+[n S9 . . ]
+"308
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
+"27 tick.h
+[v _tickRead `(ui ~T0 @X0 0 ef ]
+"55 C:\Program Files\Microchip\xc8\v2.40\pic\include\proc\pic16f887.h
+[; <" INDF equ 00h ;# ">
+"62
+[; <" TMR0 equ 01h ;# ">
+"69
+[; <" PCL equ 02h ;# ">
+"76
+[; <" STATUS equ 03h ;# ">
+"162
+[; <" FSR equ 04h ;# ">
+"169
+[; <" PORTA equ 05h ;# ">
+"231
+[; <" PORTB equ 06h ;# ">
+"293
+[; <" PORTC equ 07h ;# ">
+"355
+[; <" PORTD equ 08h ;# ">
+"417
+[; <" PORTE equ 09h ;# ">
+"455
+[; <" PCLATH equ 0Ah ;# ">
+"462
+[; <" INTCON equ 0Bh ;# ">
+"540
+[; <" PIR1 equ 0Ch ;# ">
+"596
+[; <" PIR2 equ 0Dh ;# ">
+"653
+[; <" TMR1 equ 0Eh ;# ">
+"660
+[; <" TMR1L equ 0Eh ;# ">
+"667
+[; <" TMR1H equ 0Fh ;# ">
+"674
+[; <" T1CON equ 010h ;# ">
+"768
+[; <" TMR2 equ 011h ;# ">
+"775
+[; <" T2CON equ 012h ;# ">
+"846
+[; <" SSPBUF equ 013h ;# ">
+"853
+[; <" SSPCON equ 014h ;# ">
+"923
+[; <" CCPR1 equ 015h ;# ">
+"930
+[; <" CCPR1L equ 015h ;# ">
+"937
+[; <" CCPR1H equ 016h ;# ">
+"944
+[; <" CCP1CON equ 017h ;# ">
+"1041
+[; <" RCSTA equ 018h ;# ">
+"1136
+[; <" TXREG equ 019h ;# ">
+"1143
+[; <" RCREG equ 01Ah ;# ">
+"1150
+[; <" CCPR2 equ 01Bh ;# ">
+"1157
+[; <" CCPR2L equ 01Bh ;# ">
+"1164
+[; <" CCPR2H equ 01Ch ;# ">
+"1171
+[; <" CCP2CON equ 01Dh ;# ">
+"1241
+[; <" ADRESH equ 01Eh ;# ">
+"1248
+[; <" ADCON0 equ 01Fh ;# ">
+"1349
+[; <" OPTION_REG equ 081h ;# ">
+"1419
+[; <" TRISA equ 085h ;# ">
+"1481
+[; <" TRISB equ 086h ;# ">
+"1543
+[; <" TRISC equ 087h ;# ">
+"1605
+[; <" TRISD equ 088h ;# ">
+"1667
+[; <" TRISE equ 089h ;# ">
+"1705
+[; <" PIE1 equ 08Ch ;# ">
+"1761
+[; <" PIE2 equ 08Dh ;# ">
+"1818
+[; <" PCON equ 08Eh ;# ">
+"1865
+[; <" OSCCON equ 08Fh ;# ">
+"1930
+[; <" OSCTUNE equ 090h ;# ">
+"1982
+[; <" SSPCON2 equ 091h ;# ">
+"2044
+[; <" PR2 equ 092h ;# ">
+"2051
+[; <" SSPADD equ 093h ;# ">
+"2058
+[; <" SSPMSK equ 093h ;# ">
+"2063
+[; <" MSK equ 093h ;# ">
+"2180
+[; <" SSPSTAT equ 094h ;# ">
+"2349
+[; <" WPUB equ 095h ;# ">
+"2419
+[; <" IOCB equ 096h ;# ">
+"2489
+[; <" VRCON equ 097h ;# ">
+"2559
+[; <" TXSTA equ 098h ;# ">
+"2645
+[; <" SPBRG equ 099h ;# ">
+"2707
+[; <" SPBRGH equ 09Ah ;# ">
+"2777
+[; <" PWM1CON equ 09Bh ;# ">
+"2847
+[; <" ECCPAS equ 09Ch ;# ">
+"2929
+[; <" PSTRCON equ 09Dh ;# ">
+"2973
+[; <" ADRESL equ 09Eh ;# ">
+"2980
+[; <" ADCON1 equ 09Fh ;# ">
+"3014
+[; <" WDTCON equ 0105h ;# ">
+"3067
+[; <" CM1CON0 equ 0107h ;# ">
+"3132
+[; <" CM2CON0 equ 0108h ;# ">
+"3197
+[; <" CM2CON1 equ 0109h ;# ">
+"3248
+[; <" EEDATA equ 010Ch ;# ">
+"3253
+[; <" EEDAT equ 010Ch ;# ">
+"3260
+[; <" EEADR equ 010Dh ;# ">
+"3267
+[; <" EEDATH equ 010Eh ;# ">
+"3274
+[; <" EEADRH equ 010Fh ;# ">
+"3281
+[; <" SRCON equ 0185h ;# ">
+"3338
+[; <" BAUDCTL equ 0187h ;# ">
+"3390
+[; <" ANSEL equ 0188h ;# ">
+"3452
+[; <" ANSELH equ 0189h ;# ">
+"3502
+[; <" EECON1 equ 018Ch ;# ">
+"3547
+[; <" EECON2 equ 018Dh ;# ">
+"26 system.h
+[p x FOSC=XT ]
+"27
+[p x WDTE=OFF ]
+"28
+[p x PWRTE=OFF ]
+"29
+[p x MCLRE=ON ]
+"30
+[p x CP=OFF ]
+"31
+[p x CPD=OFF ]
+"32
+[p x BOREN=OFF ]
+"33
+[p x IESO=ON ]
+"34
+[p x FCMEN=ON ]
+"35
+[p x LVP=OFF ]
+"37
+[p x BOR4V=BOR21V ]
+"38
+[p x WRT=OFF ]
+"29 main.c
+[v _estadoActualJ1 `E1380 ~T0 @X0 1 e ]
+"30
+[v _estadoActualJ2 `E1380 ~T0 @X0 1 e ]
+"31
+[v _estadoActualPAT1 `E1385 ~T0 @X0 1 e ]
+"32
+[v _estadoActualPAT2 `E1385 ~T0 @X0 1 e ]
+"34
+[v _tInicio_P1 `ui ~T0 @X0 1 e ]
+"35
+[v _tInicio_P2 `ui ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"50
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[e :U _main ]
+[f ]
+"52
+[e ( _appInit ..  ]
+"53
+[e ( _InicializarMEF_J1 ..  ]
+"54
+[e ( _InicializarMEF_J2 ..  ]
+"55
+[e ( _InicializarMEF_P1 ..  ]
+"56
+[e ( _InicializarMEF_P2 ..  ]
+"59
+[e :U 141 ]
+{
+"60
+[e ( _ActualizarMEF_J1 ..  ]
+"61
+[e ( _ActualizarMEF_J2 ..  ]
+"62
+[e ( _ActualizarMEF_P1 ..  ]
+"63
+[e ( _ActualizarMEF_P2 ..  ]
+"65
+}
+[e :U 140 ]
+"59
+[e $U 141  ]
+[e :U 142 ]
+"66
+[e :UE 139 ]
+}
+"70
+[v _InicializarMEF_J1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicializarMEF_J1 ]
+[f ]
+"71
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"72
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"73
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
+"74
+[e = _estadoActualJ1 . `E1380 2 ]
+"75
+[e :UE 143 ]
+}
+"77
+[v _InicializarMEF_J2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicializarMEF_J2 ]
+[f ]
+"78
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"79
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"80
+[e = _estadoActualJ2 . `E1380 2 ]
+"81
+[e :UE 144 ]
+}
+"82
+[v _InicializarMEF_P1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicializarMEF_P1 ]
+[f ]
+"83
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+"84
+[e = _estadoActualPAT1 . `E1385 0 ]
+"85
+[e :UE 145 ]
+}
+"86
+[v _InicializarMEF_P2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _InicializarMEF_P2 ]
+[f ]
+"87
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+"88
+[e = _estadoActualPAT2 . `E1385 0 ]
+"89
+[e :UE 146 ]
+}
+"91
+[v _ActualizarMEF_J1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ActualizarMEF_J1 ]
+[f ]
+"92
+[e $U 149  ]
+{
+"93
+[e :U 150 ]
+"94
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"95
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"96
+[e $ ! == -> . . _PORTCbits 0 5 `i -> 0 `i 151  ]
+{
+"97
+[e = _estadoActualJ1 . `E1380 0 ]
+"98
+}
+[e $U 152  ]
+[e :U 151 ]
+[e $ ! == -> . . _PORTCbits 0 6 `i -> 0 `i 153  ]
+{
+"99
+[e = _estadoActualJ1 . `E1380 1 ]
+"100
+}
+[e :U 153 ]
+"101
+[e :U 152 ]
+[e $U 148  ]
+"102
+[e :U 154 ]
+"103
+[e = . . _PORTDbits 0 3 -> -> 1 `i `uc ]
+"104
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"105
+[e $ ! && == -> . . _PORTCbits 0 6 `i -> 1 `i == -> . . _PORTCbits 0 5 `i -> 1 `i 155  ]
+{
+"106
+[e = _estadoActualJ1 . `E1380 2 ]
+"107
+}
+[e $U 156  ]
+[e :U 155 ]
+[e $ ! == -> . . _PORTCbits 0 5 `i -> 0 `i 157  ]
+{
+"108
+[e = _estadoActualJ1 . `E1380 0 ]
+"109
+}
+[e :U 157 ]
+"110
+[e :U 156 ]
+[e $U 148  ]
+"111
+[e :U 158 ]
+"112
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"113
+[e = . . _PORTDbits 0 4 -> -> 1 `i `uc ]
+"114
+[e $ ! && == -> . . _PORTCbits 0 6 `i -> 1 `i == -> . . _PORTCbits 0 5 `i -> 1 `i 159  ]
+{
+"115
+[e = _estadoActualJ1 . `E1380 2 ]
+"116
+}
+[e $U 160  ]
+[e :U 159 ]
+[e $ ! == -> . . _PORTCbits 0 6 `i -> 0 `i 161  ]
+{
+"117
+[e = _estadoActualJ1 . `E1380 1 ]
+"118
+}
+[e :U 161 ]
+"119
+[e :U 160 ]
+[e $U 148  ]
+"120
+[e :U 162 ]
+"124
+[e ( _InicializarMEF_J1 ..  ]
+"125
+}
+[e $U 148  ]
+"92
+[e :U 149 ]
+[e [\ _estadoActualJ1 , $ . `E1380 2 150
+ , $ . `E1380 1 154
+ , $ . `E1380 0 158
+ 162 ]
+"125
+[e :U 148 ]
+"126
+[e :UE 147 ]
+}
+"128
+[v _ActualizarMEF_J2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ActualizarMEF_J2 ]
+[f ]
+"129
+[e $U 165  ]
+{
+"130
+[e :U 166 ]
+"131
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"132
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"133
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 0 `i 167  ]
+{
+"134
+[e = _estadoActualJ2 . `E1380 0 ]
+"135
+}
+[e $U 168  ]
+[e :U 167 ]
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 0 `i 169  ]
+{
+"136
+[e = _estadoActualJ2 . `E1380 1 ]
+"137
+}
+[e :U 169 ]
+"138
+[e :U 168 ]
+[e $U 164  ]
+"139
+[e :U 170 ]
+"140
+[e = . . _PORTDbits 0 5 -> -> 1 `i `uc ]
+"141
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"142
+[e $ ! && == -> . . _PORTCbits 0 1 `i -> 1 `i == -> . . _PORTCbits 0 0 `i -> 1 `i 171  ]
+{
+"143
+[e = _estadoActualJ2 . `E1380 2 ]
+"144
+}
+[e $U 172  ]
+[e :U 171 ]
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 0 `i 173  ]
+{
+"145
+[e = _estadoActualJ2 . `E1380 0 ]
+"146
+}
+[e :U 173 ]
+"147
+[e :U 172 ]
+[e $U 164  ]
+"148
+[e :U 174 ]
+"149
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"150
+[e = . . _PORTDbits 0 6 -> -> 1 `i `uc ]
+"151
+[e $ ! && == -> . . _PORTCbits 0 1 `i -> 1 `i == -> . . _PORTCbits 0 0 `i -> 1 `i 175  ]
+{
+"152
+[e = _estadoActualJ2 . `E1380 2 ]
+"153
+}
+[e $U 176  ]
+[e :U 175 ]
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 0 `i 177  ]
+{
+"154
+[e = _estadoActualJ2 . `E1380 1 ]
+"155
+}
+[e :U 177 ]
+"156
+[e :U 176 ]
+[e $U 164  ]
+"157
+[e :U 178 ]
+"161
+[e ( _InicializarMEF_J2 ..  ]
+"162
+}
+[e $U 164  ]
+"129
+[e :U 165 ]
+[e [\ _estadoActualJ2 , $ . `E1380 2 166
+ , $ . `E1380 1 170
+ , $ . `E1380 0 174
+ 178 ]
+"162
+[e :U 164 ]
+"163
+[e :UE 163 ]
+}
+"166
+[v _ActualizarMEF_P1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ActualizarMEF_P1 ]
+[f ]
+"167
+[e $U 181  ]
+{
+"168
+[e :U 182 ]
+"169
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+"170
+[e $ ! == -> . . _PORTCbits 0 7 `i -> 0 `i 183  ]
+{
+"171
+[e = _tInicio_P1 ( _tickRead ..  ]
+"172
+[e = _estadoActualPAT1 . `E1385 1 ]
+"173
+}
+[e :U 183 ]
+"174
+[e $U 180  ]
+"176
+[e :U 184 ]
+"177
+[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+"178
+[e $ ! > - ( _tickRead ..  _tInicio_P1 -> -> 200 `i `ui 185  ]
+{
+"179
+[e = _tInicio_P1 ( _tickRead ..  ]
+"180
+[e = _estadoActualPAT1 . `E1385 2 ]
+"181
+}
+[e :U 185 ]
+"182
+[e $U 180  ]
+"184
+[e :U 186 ]
+"185
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+"186
+[e $ ! && > - ( _tickRead ..  _tInicio_P1 -> -> 600 `i `ui == -> . . _PORTCbits 0 7 `i -> 1 `i 187  ]
+{
+"187
+[e = _estadoActualPAT1 . `E1385 0 ]
+"188
+}
+[e :U 187 ]
+"189
+[e $U 180  ]
+"190
+[e :U 188 ]
+"194
+[e ( _InicializarMEF_P1 ..  ]
+"195
+}
+[e $U 180  ]
+"167
+[e :U 181 ]
+[e [\ _estadoActualPAT1 , $ . `E1385 0 182
+ , $ . `E1385 1 184
+ , $ . `E1385 2 186
+ 188 ]
+"195
+[e :U 180 ]
+"196
+[e :UE 179 ]
+}
+"198
+[v _ActualizarMEF_P2 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ActualizarMEF_P2 ]
+[f ]
+"199
+[e $U 191  ]
+{
+"200
+[e :U 192 ]
+"201
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+"202
+[e $ ! == -> . . _PORTCbits 0 2 `i -> 0 `i 193  ]
+{
+"203
+[e = _tInicio_P2 ( _tickRead ..  ]
+"204
+[e = _estadoActualPAT2 . `E1385 1 ]
+"205
+}
+[e :U 193 ]
+"206
+[e $U 190  ]
+"208
+[e :U 194 ]
+"209
+[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+"210
+[e $ ! > - ( _tickRead ..  _tInicio_P2 -> -> 200 `i `ui 195  ]
+{
+"211
+[e = _tInicio_P2 ( _tickRead ..  ]
+"212
+[e = _estadoActualPAT2 . `E1385 2 ]
+"213
+}
+[e :U 195 ]
+"214
+[e $U 190  ]
+"216
+[e :U 196 ]
+"217
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+"218
+[e $ ! && > - ( _tickRead ..  _tInicio_P2 -> -> 600 `i `ui == -> . . _PORTCbits 0 2 `i -> 1 `i 197  ]
+{
+"219
+[e = _estadoActualPAT2 . `E1385 0 ]
+"220
+}
+[e :U 197 ]
+"221
+[e $U 190  ]
+"222
+[e :U 198 ]
+"226
+[e ( _InicializarMEF_P2 ..  ]
+"227
+}
+[e $U 190  ]
+"199
+[e :U 191 ]
+[e [\ _estadoActualPAT2 , $ . `E1385 0 192
+ , $ . `E1385 1 194
+ , $ . `E1385 2 196
+ 198 ]
+"227
+[e :U 190 ]
+"228
+[e :UE 189 ]
+}
